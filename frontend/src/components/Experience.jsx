@@ -146,25 +146,6 @@ const Experience = () => {
               ))}
             </div>
 
-            {/* View All Certificates */}
-            <div className="mt-8 bg-gradient-to-r from-purple-50 to-blue-50 rounded-lg p-6 text-center">
-              <h4 className="text-lg font-semibold text-slate-800 mb-3">
-                View All Certificates
-              </h4>
-              <p className="text-slate-600 text-sm mb-4">
-                See my complete certification journey and recent achievements on LinkedIn
-              </p>
-              <a
-                href="https://www.linkedin.com/in/yogeshkushwaha-offcial/recent-activity/all/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
-              >
-                <ExternalLink className="h-4 w-4" />
-                LinkedIn Certificates
-              </a>
-            </div>
-
             {/* Achievement Stats */}
             <div className="mt-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6">
               <h4 className="text-lg font-semibold text-slate-800 mb-4 text-center">
