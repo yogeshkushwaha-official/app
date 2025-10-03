@@ -100,131 +100,60 @@ const Contact = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+          {/* Google Form Section */}
           <div>
             <h3 className="text-2xl font-bold text-slate-800 mb-8">
-              Send Message
+              Send Message via Google Form
             </h3>
             
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-                    placeholder="Your Name"
-                  />
+            <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 text-center">
+              <div className="mb-6">
+                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <ExternalLink className="h-8 w-8 text-white" />
                 </div>
-                
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-slate-700 mb-2">
-                    Email *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-                    placeholder="your@email.com"
-                  />
-                </div>
+                <h4 className="text-xl font-semibold text-slate-800 mb-3">
+                  Ready to Connect?
+                </h4>
+                <p className="text-slate-600 leading-relaxed max-w-md mx-auto">
+                  Click below to open my contact form where you can share details about your project, 
+                  ask questions about data analytics, or just say hello!
+                </p>
               </div>
               
-              <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-slate-700 mb-2">
-                  Subject *
-                </label>
-                <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200"
-                  placeholder="Project Discussion"
-                />
-              </div>
-              
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-700 mb-2">
-                  Message *
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  rows={6}
-                  value={formData.message}
-                  onChange={handleChange}
-                  required
-                  className="w-full px-4 py-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors duration-200 resize-vertical"
-                  placeholder="Tell me about your project or how I can help..."
-                ></textarea>
-              </div>
-              
-              {/* Submit Button */}
               <button
-                type="submit"
-                disabled={isSubmitting}
-                className={`w-full flex items-center justify-center gap-2 px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                  isSubmitting
-                    ? 'bg-slate-400 text-white cursor-not-allowed'
-                    : 'bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 transform hover:scale-105 shadow-lg hover:shadow-xl'
-                }`}
+                onClick={handleGoogleFormRedirect}
+                className="inline-flex items-center gap-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:from-blue-700 hover:to-indigo-700 transition-all duration-200 transform hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                {isSubmitting ? (
-                  <>
-                    <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    <Send className="h-4 w-4" />
-                    Send Message
-                  </>
-                )}
+                <Send className="h-5 w-5" />
+                <span>Open Contact Form</span>
+                <ExternalLink className="h-4 w-4" />
               </button>
               
-              {/* Success Message */}
-              {submitStatus === 'success' && (
-                <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg">
-                  Message sent successfully! I'll get back to you soon.
-                </div>
-              )}
-              
-              {/* Error Message */}
-              {submitStatus === 'error' && (
-                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
-                  There was an error sending your message. Please try the Google Form option below.
-                </div>
-              )}
-              
-              {/* Alternative Google Form Button */}
-              <div className="mt-4 p-4 bg-blue-50 rounded-lg">
-                <p className="text-sm text-blue-700 mb-3">
-                  Prefer to use Google Forms? Click below for direct access:
-                </p>
-                <button
-                  type="button"
-                  onClick={handleGoogleFormRedirect}
-                  className="w-full flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
-                >
-                  <ExternalLink className="h-4 w-4" />
-                  Open Google Form
-                </button>
+              <div className="mt-6 text-sm text-slate-500">
+                <p>✨ Secure Google Form • Quick Response • Mobile Friendly</p>
               </div>
-            </form>
+            </div>
+
+            {/* Alternative Contact Methods */}
+            <div className="mt-8 p-6 bg-slate-50 rounded-lg">
+              <h4 className="font-semibold text-slate-800 mb-4">Prefer Direct Contact?</h4>
+              <div className="space-y-3 text-sm">
+                <div className="flex items-center gap-3">
+                  <Mail className="h-4 w-4 text-blue-600" />
+                  <span className="text-slate-600">Email me directly at:</span>
+                  <a href={`mailto:${personal.contact.email}`} className="text-blue-600 hover:text-blue-700 font-medium">
+                    {personal.contact.email}
+                  </a>
+                </div>
+                <div className="flex items-center gap-3">
+                  <Linkedin className="h-4 w-4 text-blue-600" />
+                  <span className="text-slate-600">Connect on LinkedIn:</span>
+                  <a href={personal.contact.linkedin} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 font-medium">
+                    View Profile
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
