@@ -260,6 +260,28 @@ const Contact = () => {
                   Message sent successfully! I'll get back to you soon.
                 </div>
               )}
+              
+              {/* Error Message */}
+              {submitStatus === 'error' && (
+                <div className="bg-red-50 border border-red-200 text-red-700 px-4 py-3 rounded-lg">
+                  There was an error sending your message. Please try the Google Form option below.
+                </div>
+              )}
+              
+              {/* Alternative Google Form Button */}
+              <div className="mt-4 p-4 bg-blue-50 rounded-lg">
+                <p className="text-sm text-blue-700 mb-3">
+                  Prefer to use Google Forms? Click below for direct access:
+                </p>
+                <button
+                  type="button"
+                  onClick={handleGoogleFormRedirect}
+                  className="w-full flex items-center justify-center gap-2 bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors duration-200"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  Open Google Form
+                </button>
+              </div>
             </form>
           </div>
         </div>
