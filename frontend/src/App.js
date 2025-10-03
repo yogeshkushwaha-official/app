@@ -3,6 +3,11 @@ import './App.css';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import About from './components/About';
+import Skills from './components/Skills';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 // Custom CSS for animations
 const customStyles = `
@@ -29,6 +34,29 @@ const customStyles = `
       transform: translate(0px, 0px) scale(1);
     }
   }
+  
+  /* Smooth scrolling for all browsers */
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
 `;
 
 function App() {
@@ -39,7 +67,12 @@ function App() {
       <main>
         <Hero />
         <About />
+        <Skills />
+        <Projects />
+        <Experience />
+        <Contact />
       </main>
+      <Footer />
     </div>
   );
 }
