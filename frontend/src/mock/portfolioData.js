@@ -121,34 +121,122 @@ export const portfolioData = {
     }
   ],
   
-  certifications: [
-    {
-      id: 1,
-      title: "HP LIFE - Data Science & Analytics",
-      issuer: "HP LIFE",
-      date: "October 2024",
-      description: "Successfully completed the HP LIFE online course, covering data science methodologies, tools, and business applications."
-    },
-    {
-      id: 2,
-      title: "Data Analytics using ChatGPT with Excel and Python",
-      issuer: "Great Learning Academy",
-      date: "October 2024",
-      description: "Completed a course on leveraging ChatGPT for data analytics, focusing on data processing using Excel and Python."
-    },
-    {
-      id: 3,
-      title: "Deloitte Australia Data Analytics Job Simulation",
-      issuer: "Forage",
-      date: "February 2025",
-      description: "Completed a Deloitte job simulation focused on data analysis and forensic technology using Tableau and Excel."
-    },
-    {
-      id: 4,
-      title: "Naukri Campus Young Turks Participation",
-      issuer: "Naukri Campus",
-      date: "October 2024",
-      description: "Participated in India's largest skill contest organized by Naukri Campus in association with leading companies including Kotak Life, Siemens, PhonePe, PepsiCo, and Capgemini."
-    }
-  ]
+  certifications: {
+    masterclasses: [
+      {
+        id: 1,
+        title: "Jio Customer Churn Analysis using Tableau",
+        issuer: "WsCube Tech",
+        date: "1st Mar, 2025",
+        topic: "Tableau, Customer Churn Analysis",
+        type: "Masterclass Participation"
+      },
+      {
+        id: 2,
+        title: "Zepto Inventory & Supply Chain Analytics",
+        issuer: "WsCube Tech", 
+        date: "21st Feb, 2025",
+        topic: "Inventory & Supply Chain Analytics",
+        type: "Masterclass Participation"
+      },
+      {
+        id: 3,
+        title: "Tableau Fundamentals in 90 minutes",
+        issuer: "WsCube Tech",
+        date: "31st Dec, 2024",
+        topic: "Tableau Fundamentals",
+        type: "Masterclass Participation"
+      },
+      {
+        id: 4,
+        title: "YouTube Data Analysis using Python",
+        issuer: "WsCube Tech",
+        date: "19th Dec, 2024",
+        topic: "Python, Data Analysis",
+        type: "Masterclass Participation"
+      },
+      {
+        id: 5,
+        title: "Blinkit Data Analysis Using SQL",
+        issuer: "WsCube Tech",
+        date: "26th Nov, 2024",
+        topic: "SQL, Data Analysis",
+        type: "Masterclass Participation"
+      }
+    ],
+    
+    forageSimulations: [
+      {
+        id: 1,
+        title: "Data Analytics Job Simulation",
+        provider: "Deloitte",
+        date: "April 5th, 2025",
+        tasks: "Data analysis, Forensic technology",
+        type: "Job Simulation"
+      },
+      {
+        id: 2,
+        title: "Solutions Architecture Job Simulation",
+        provider: "AWS",
+        date: "March 11th, 2025", 
+        tasks: "Designing a simple, scalable, hosting architecture",
+        type: "Job Simulation"
+      }
+    ],
+
+    internships: [
+      {
+        id: 1,
+        title: "Python Programming Internship",
+        provider: "CodeAlpha",
+        duration: "15th September 2024 to 15th October 2024",
+        type: "Virtual Internship"
+      },
+      {
+        id: 2,
+        title: "AI: Transformative Learning with TechSaksham",
+        provider: "Microsoft & SAP (CSR initiative), implemented by Edunet Foundation",
+        affiliation: "Affiliated with Dr. Harisingh Gour Vishwavidyalaya",
+        type: "Internship Program"
+      }
+    ],
+
+    otherCertificates: [
+      {
+        id: 1,
+        title: "Data Analyst Certification",
+        provider: "One Roadmap",
+        date: "Certified on: March 11, 2025",
+        type: "Skill Certification Test"
+      },
+      {
+        id: 2,
+        title: "Python Project: Build Email Spam Detector",
+        provider: "LetsUpgrade (in collaboration with NSDC)",
+        duration: "11th March 2024 to 13th March 2024",
+        type: "Project Completion (3 Days)"
+      },
+      {
+        id: 3,
+        title: "HP LIFE - Data Science & Analytics",
+        provider: "HP LIFE",
+        date: "October 2024",
+        type: "Course Completion"
+      },
+      {
+        id: 4,
+        title: "Data Analytics using ChatGPT with Excel and Python",
+        provider: "Great Learning Academy",
+        date: "October 2024",
+        type: "Course Completion"
+      },
+      {
+        id: 5,
+        title: "Naukri Campus Young Turks Participation",
+        provider: "Naukri Campus",
+        date: "October 2024",
+        type: "Skill Contest Participation"
+      }
+    ]
+  }
 };
