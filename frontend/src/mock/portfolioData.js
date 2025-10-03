@@ -12,7 +12,7 @@ export const portfolioData = {
       github: "https://github.com/yogeshkushwaha-official",
       location: "Sagar, MP, India"
     },
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop&crop=face"
+    avatar: "https://customer-assets.emergentagent.com/job_portfolio-display-14/artifacts/1r5zt7tp_WhatsApp%20Image%202025-10-03%20at%204.05.38%20PM.jpeg"
   },
   
   skills: {
