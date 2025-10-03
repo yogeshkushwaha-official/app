@@ -114,36 +114,86 @@ const Experience = () => {
           <div>
             <h3 className="text-2xl font-bold text-slate-800 mb-8 flex items-center gap-3">
               <Award className="h-6 w-6 text-purple-600" />
-              Certifications
+              Certifications & Achievements
             </h3>
             
-            <div className="space-y-6">
-              {certifications.map((cert) => (
-                <div 
-                  key={cert.id}
-                  className="bg-white rounded-lg p-6 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1"
-                >
-                  <div className="flex items-start justify-between mb-3">
-                    <h4 className="text-lg font-semibold text-slate-800 flex-1">
-                      {cert.title}
-                    </h4>
-                    <div className="flex-shrink-0 w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center ml-4">
-                      <Award className="w-5 h-5 text-purple-600" />
+            {/* Masterclasses */}
+            <div className="mb-8">
+              <h4 className="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
+                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                Masterclasses (WsCube Tech)
+              </h4>
+              <div className="space-y-4">
+                {certifications.masterclasses.map((cert) => (
+                  <div key={cert.id} className="bg-blue-50 border border-blue-200 rounded-lg p-4 hover:shadow-md transition-shadow duration-300">
+                    <div className="flex justify-between items-start mb-2">
+                      <h5 className="font-semibold text-slate-800 text-sm">{cert.title}</h5>
+                      <span className="text-xs bg-blue-100 text-blue-700 px-2 py-1 rounded">{cert.date}</span>
                     </div>
+                    <p className="text-slate-600 text-xs mb-1">Key Topics: {cert.topic}</p>
+                    <p className="text-slate-500 text-xs">{cert.issuer}</p>
                   </div>
-                  
-                  <div className="text-purple-600 font-medium mb-2">{cert.issuer}</div>
-                  
-                  <div className="flex items-center text-slate-500 text-sm mb-3">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    {cert.date}
+                ))}
+              </div>
+            </div>
+
+            {/* Forage Job Simulations */}
+            <div className="mb-8">
+              <h4 className="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                Forage Job Simulations
+              </h4>
+              <div className="space-y-4">
+                {certifications.forageSimulations.map((cert) => (
+                  <div key={cert.id} className="bg-green-50 border border-green-200 rounded-lg p-4 hover:shadow-md transition-shadow duration-300">
+                    <div className="flex justify-between items-start mb-2">
+                      <h5 className="font-semibold text-slate-800 text-sm">{cert.title}</h5>
+                      <span className="text-xs bg-green-100 text-green-700 px-2 py-1 rounded">{cert.date}</span>
+                    </div>
+                    <p className="text-slate-600 text-xs mb-1">Provider: {cert.provider}</p>
+                    <p className="text-slate-600 text-xs">Key Tasks: {cert.tasks}</p>
                   </div>
-                  
-                  <p className="text-slate-600 text-sm leading-relaxed">
-                    {cert.description}
-                  </p>
-                </div>
-              ))}
+                ))}
+              </div>
+            </div>
+
+            {/* Internships */}
+            <div className="mb-8">
+              <h4 className="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
+                <div className="w-3 h-3 bg-purple-500 rounded-full"></div>
+                Internships
+              </h4>
+              <div className="space-y-4">
+                {certifications.internships.map((cert) => (
+                  <div key={cert.id} className="bg-purple-50 border border-purple-200 rounded-lg p-4 hover:shadow-md transition-shadow duration-300">
+                    <h5 className="font-semibold text-slate-800 text-sm mb-2">{cert.title}</h5>
+                    <p className="text-slate-600 text-xs mb-1">Provider: {cert.provider}</p>
+                    {cert.duration && <p className="text-slate-600 text-xs mb-1">Duration: {cert.duration}</p>}
+                    {cert.affiliation && <p className="text-slate-500 text-xs">{cert.affiliation}</p>}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Other Certificates */}
+            <div className="mb-8">
+              <h4 className="text-lg font-semibold text-slate-800 mb-4 flex items-center gap-2">
+                <div className="w-3 h-3 bg-orange-500 rounded-full"></div>
+                Other Certificates
+              </h4>
+              <div className="space-y-4">
+                {certifications.otherCertificates.map((cert) => (
+                  <div key={cert.id} className="bg-orange-50 border border-orange-200 rounded-lg p-4 hover:shadow-md transition-shadow duration-300">
+                    <div className="flex justify-between items-start mb-2">
+                      <h5 className="font-semibold text-slate-800 text-sm">{cert.title}</h5>
+                      {cert.date && <span className="text-xs bg-orange-100 text-orange-700 px-2 py-1 rounded">{cert.date}</span>}
+                    </div>
+                    <p className="text-slate-600 text-xs mb-1">Provider: {cert.provider}</p>
+                    {cert.duration && <p className="text-slate-600 text-xs mb-1">Duration: {cert.duration}</p>}
+                    <p className="text-slate-500 text-xs">{cert.type}</p>
+                  </div>
+                ))}
+              </div>
             </div>
 
             {/* Achievement Stats */}
