@@ -8,7 +8,7 @@ export const portfolioData = {
     contact: {
       email: "mryogeshkushwaha@gmail.com",
       phone: "+91-9301725600",
-      linkedin: "https://www.linkedin.com/in/yogeshkushwaha-tech/",
+      linkedin: "https://www.linkedin.com/in/yogeshkushwaha-offcial/",
       github: "https://github.com/yogeshkushwaha-official",
       location: "Sagar, MP, India"
     },
