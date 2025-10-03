@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Mail, Phone, MapPin, Send, Linkedin, Github, Download, ExternalLink } from 'lucide-react';
 import { portfolioData } from '../mock/portfolioData';
 
