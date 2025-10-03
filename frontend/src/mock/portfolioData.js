@@ -142,6 +142,13 @@ export const portfolioData = {
       issuer: "Forage",
       date: "February 2025",
       description: "Completed a Deloitte job simulation focused on data analysis and forensic technology using Tableau and Excel."
+    },
+    {
+      id: 4,
+      title: "Naukri Campus Young Turks Participation",
+      issuer: "Naukri Campus",
+      date: "October 2024",
+      description: "Participated in India's largest skill contest organized by Naukri Campus in association with leading companies including Kotak Life, Siemens, PhonePe, PepsiCo, and Capgemini."
     }
   ]
 };
