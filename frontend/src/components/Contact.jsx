@@ -24,16 +24,49 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Google Form submission
+      // Replace with your Google Form URL - instructions in comments below
+      const googleFormUrl = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/formResponse';
+      
+      // Create form data for Google Forms
+      const formDataToSubmit = new FormData();
+      // Map your form fields to Google Form entry IDs (you'll need to inspect your Google Form to get these)
+      // Example mappings - replace these with your actual entry IDs:
+      formDataToSubmit.append('entry.NAME_ENTRY_ID', formData.name);
+      formDataToSubmit.append('entry.EMAIL_ENTRY_ID', formData.email); 
+      formDataToSubmit.append('entry.SUBJECT_ENTRY_ID', formData.subject);
+      formDataToSubmit.append('entry.MESSAGE_ENTRY_ID', formData.message);
+      
+      // Submit to Google Form (note: this might be blocked by CORS in some browsers)
+      await fetch(googleFormUrl, {
+        method: 'POST',
+        mode: 'no-cors', // Important for Google Forms
+        body: formDataToSubmit
+      });
+      
+      // Show success message
       setSubmitStatus('success');
-      setIsSubmitting(false);
       setFormData({ name: '', email: '', subject: '', message: '' });
       
+    } catch (error) {
+      console.error('Form submission error:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+      
+      // Clear status after 5 seconds
       setTimeout(() => {
         setSubmitStatus('');
-      }, 3000);
-    }, 1000);
+      }, 5000);
+    }
+  };
+
+  // Alternative: Direct Google Form redirect (more reliable)
+  const handleGoogleFormRedirect = () => {
+    // Replace with your actual Google Form URL
+    const googleFormUrl = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?usp=sf_link';
+    window.open(googleFormUrl, '_blank');
   };
 
   return (
