@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, MapPin, Award, GraduationCap, Briefcase } from 'lucide-react';
+import { Calendar, MapPin, Award, GraduationCap, Briefcase, ExternalLink } from 'lucide-react';
 import { portfolioData } from '../mock/portfolioData';
 
 const Experience = () => {
