@@ -147,7 +147,7 @@ const Experience = () => {
             </div>
 
             {/* Achievement Stats */}
-            <div className="mt-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6">
+            <div className="mt-8 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6">
               <h4 className="text-lg font-semibold text-slate-800 mb-4 text-center">
                 Key Achievements
               </h4>
